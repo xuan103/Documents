@@ -1,4 +1,4 @@
-vi指令說明(簡易版)
+VI 指令說明(簡易版)
 http://www2.nsysu.edu.tw/csmlab/unix/vi_simple.htm
 
   vi 有兩個 mode , command mode 與 insert mode 。平常我們在輸入時所使用的
