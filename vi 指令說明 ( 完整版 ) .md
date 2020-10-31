@@ -1,4 +1,4 @@
-vi指令說明(完整版)
+vi 指令說明(完整版)
 http://www2.nsysu.edu.tw/csmlab/unix/vi_command.htm
 
 # vi 的操作模式
