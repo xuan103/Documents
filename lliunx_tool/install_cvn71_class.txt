@@ -1,0 +1,39 @@
+# if show "Oops, wrong host"
+# to change the hostname
+
+run \
+echo 'cvn71' >> /etc/hostname
+
+# if show "Oops, ub2004.base not find"
+
+run \
+cd cvn
+
+# if show "Oops, can not create TUN/TAP"
+
+run \
+sudo apt-get -y install uml-utilities
+
+# if show "Oops, inet not running" *
+
+# install kvm
+egrep -c '(vmx|svm)' /proc/cpuinfo
+sudo apt install cpu-checker
+sudo apt install -y cpu-checker
+sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
+sudo systemctl enable --now libvirtd
+
+run \
+./home/bigred/wk/cnt/bin/kvmnet.sh
+
+# update the system
+
+run \
+sudo apt update; sudo apt -y upgrade
+
+
+# add nopassword
+
+echo '%sudo ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+

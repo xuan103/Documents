@@ -1,0 +1,21 @@
+# install discord
+
+DEBIAN_FRONTEND=noninteractive
+wget https://dl.discordapp.net/apps/linux/0.0.12/discord-0.0.12.deb
+sudo apt -y install ./discord-0.0.12.deb
+
+# install notepadqq
+
+DEBIAN_FRONTEND=noninteractive
+sudo add-apt-repository ppa:notepadqq-team/notepadqq -y
+sudo apt-get update --fix-missing 
+sudo apt-get -y install notepadqq
+sudo pacman -S notepadqq -y
+
+# install vscode
+
+sudo apt-get update --fix-missing
+
+
+
+

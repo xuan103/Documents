@@ -1,0 +1,30 @@
+下載 kubectl tool
+[admin]$ curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" 
+
+新增為執行檔
+[admin]$ chmod +x kubectl
+
+移動到bin/
+[admin]$ mv kubectl bin/
+
+新建目錄區
+[admin]$ mkdir .kube
+[admin]$ scp [master]:/etc/rancher/k3s/k3s.yaml ~/.kube/config
+
+更改master serverIP
+[admin]$ nano .kube/config
+
+檔案名稱不為config，可使用--kubeconfig ~/.kube/k3s.yaml
+alias kg='kubectl --kubeconfig ~/.kube/k3s.yaml get '
+
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0
+    server: https://[masterIP]:6443
+	
+更改bash
+1. 先刪除/etc/hosts 
+2. 修改不檢查電腦名稱
+3. admin 沒有憑證
+
