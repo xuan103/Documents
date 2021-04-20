@@ -1,5 +1,5 @@
 VI 指令說明(完整版)
-http://www2.nsysu.edu.tw/csmlab/unix/vi_command.htm
+http://www2.nsysu.eduMQTT.tw/csmlab/unix/vi_command.htm
 
 # vi 的操作模式
 
